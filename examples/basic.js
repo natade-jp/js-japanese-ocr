@@ -1,7 +1,7 @@
 import { recognize } from "../src/index.js";
 
 async function main() {
-	const image = process.argv[2] || "sample.png";
+	const image = process.argv[2] || "examples/sample.png";
 	try {
 		const res = await recognize(image);
 		console.log("TEXT:\n", res.text);
