@@ -1,0 +1,41 @@
+{
+	"name": "@natade-jp/japanese-ocr",
+	"version": "0.1.0",
+	"description": "Windows x64 向けの完全オフライン日本語OCRラッパー（RapidOCR-json ベース）",
+	"type": "module",
+	"main": "./src/index.js",
+	"exports": {
+		".": "./src/index.js"
+	},
+	"files": [
+		"src",
+		"bin",
+		"licenses",
+		"README.md",
+		"LICENSE",
+		"THIRD_PARTY_NOTICES.md"
+	],
+	"scripts": {
+		"test": "node --test",
+		"test:unit": "node --test test/parseRapidOcrResult.test.js test/validateEnvironment.test.js",
+		"test:integration": "node --test test/recognize.test.js",
+		"example": "node examples/basic.js",
+		"pack:check": "npm pack --dry-run"
+	},
+	"engines": {
+		"node": ">=20"
+	},
+	"os": [
+		"win32"
+	],
+	"cpu": [
+		"x64"
+	],
+	"keywords": [
+		"japanese",
+		"ocr",
+		"rapidocr",
+		"offline"
+	],
+	"license": "MIT"
+}
